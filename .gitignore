@@ -1,0 +1,136 @@
+# NextAir .gitignore
+
+# Arduino build files
+*.elf
+*.hex
+*.bin
+*.map
+*.lss
+*.sym
+*.lst
+
+# Arduino IDE
+.build/
+.development/
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+*.code-workspace
+
+# Mac OS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# ESP8266 specific
+*.eeprom
+*.spiffs
+
+# Credentials (DO NOT COMMIT)
+credentials.h
+secrets.h
+config_private.h
+
+# Test files
+test_*.ino
+debug_*.ino
+
+# Documentation build
+_build/
+dist/
+
+# Python (if used for tools)
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+
+# Node modules (if web dev)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment files
+.env
+.env.local
+
+# Package files
+*.zip
+*.tar.gz
+*.rar
+
+# Version control
+.git/
+.svn/
+
+# Private notes
+NOTES.txt
+TODO_PRIVATE.md

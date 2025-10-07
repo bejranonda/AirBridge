@@ -408,11 +408,54 @@ Permission is hereby granted, free of charge...
 - Wenext.net (Smart Energy Technology Co., Ltd.)
 - Dr.Siwanand Misara
 
+### Third-Party Libraries & Credits
+
+This project builds upon excellent open-source libraries. We are grateful to:
+
+**1. IRremoteESP8266** (LGPL v2.1)
+- **Original Authors:** Ken Shirriff (Arduino-IRremote)
+- **ESP8266 Port:** Mark Szabo, Sebastien Warin
+- **Current Maintainer:** David Conran (crankyoldgit)
+- **Repository:** [github.com/crankyoldgit/IRremoteESP8266](https://github.com/crankyoldgit/IRremoteESP8266)
+- **Description:** Infrared remote library supporting 60+ AC protocols
+
+**2. DallasTemperature** (LGPL v2.1)
+- **Authors:** Miles Burton, Tim Newsome, Guil Barros, Rob Tillaart
+- **Repository:** [github.com/milesburton/Arduino-Temperature-Control-Library](https://github.com/milesburton/Arduino-Temperature-Control-Library)
+- **Description:** Temperature sensor library for DS18B20 and compatible sensors
+
+**3. OneWire** (MIT-like)
+- **Authors:** Jim Studt, Tom Pollard, Robin James, Paul Stoffregen
+- **Repository:** [github.com/PaulStoffregen/OneWire](https://github.com/PaulStoffregen/OneWire)
+- **Description:** 1-Wire communication protocol implementation
+
+**4. PubSubClient** (MIT)
+- **Author:** Nicholas O'Leary
+- **Repository:** [github.com/knolleary/pubsubclient](https://github.com/knolleary/pubsubclient)
+- **Description:** MQTT client library for Arduino
+
+**5. Adafruit MQTT Library** (MIT)
+- **Author:** Adafruit Industries
+- **Repository:** [github.com/adafruit/Adafruit_MQTT_Library](https://github.com/adafruit/Adafruit_MQTT_Library)
+- **Description:** MQTT client with Adafruit IO support
+
+**6. ESP8266Ping** (LGPL v2.1)
+- **Author:** Daniele Colanardi
+- **Repository:** [github.com/dancol90/ESP8266Ping](https://github.com/dancol90/ESP8266Ping)
+- **Description:** ICMP ping library for ESP8266
+
+**7. ESP8266 Arduino Core**
+- **Authors:** ESP8266 Community
+- **Repository:** [github.com/esp8266/Arduino](https://github.com/esp8266/Arduino)
+- **Description:** Arduino core for ESP8266 WiFi chip
+
 ### Special Thanks
-- **IRremoteESP8266** library contributors
-- **DallasTemperature** library maintainers
-- ESP8266 community
-- All future contributors to this project
+- ESP8266 community for continuous support
+- Arduino community for the development ecosystem
+- All open-source contributors who made this project possible
+- All future contributors to AirBridge
+
+See [LICENSE](LICENSE) file for complete third-party license information.
 
 ---
 
