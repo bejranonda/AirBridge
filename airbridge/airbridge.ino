@@ -371,6 +371,9 @@ void setup(){
  * ******************************************************************************
  */
 void loop(){//20190121
+  // v2.1: Feed watchdog at start of loop to prevent random reboots
+  ESP.wdtFeed();
+
   static uint16_t count_main_loop= 0;// marker for loop_cycle
 
   //if not intitial (state != 0), then calling state-function and another function every 20 seconds
@@ -421,7 +424,16 @@ void loop(){//20190121
 
   //If found IR signal then process in check_ir and report over MQTT in MQTTtrigger_get_ir
   if(rmt.check_ir()){
-    saving_vars_to_eeprom(); //saving vars in eeprom: Temperature, current remote status, will be restored after next restart
+    // v2.1: Throttle EEPROM writes to prevent hardware degradation
+    // Only write once per hour instead of every IR signal
+    static uint32_t last_eeprom_write = 0;
+    const uint32_t EEPROM_WRITE_INTERVAL = 3600000;  // 1 hour in milliseconds
+
+    if (millis() - last_eeprom_write > EEPROM_WRITE_INTERVAL) {
+      saving_vars_to_eeprom(); //saving vars in eeprom: Temperature, current remote status
+      last_eeprom_write = millis();
+      if (show_data) Serial.println(F("[EEPROM] State saved"));
+    }
     MQTTtrigger_get_ir();
 
   }

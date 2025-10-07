@@ -116,21 +116,18 @@ void read_temp_slope_compressor(){//20181116
   mem.tr[1] = mem.tr[2];
 
   //read new temperature
+  // v2.1: Fixed - use real sensor readings instead of simulation
   if (mem.tsensors_select){
-    //mem.tc[2] = get_temperature(0);//tc cabel
-    mem.tc[2] = generate_temp_tc(true); // Only Test
-    //mem.tr[2] = get_temperature(1);//tr cabel
-    mem.tr[2] = generate_temp_tc(false); // Only Test
+    mem.tc[2] = get_temperature(0);  // Coil temperature sensor
+    mem.tr[2] = get_temperature(1);  // Room temperature sensor
     if ((mem.tr[2] <= default_min_tc_to_detect_compressor_on) && (mem.tc[2] > default_min_tc_to_detect_compressor_on)){
       mem.tsensors_select = 0;
       switch_tc_tr();
     }
   }
   else{
-    //mem.tc[2] = get_temperature(1);//tc cabel
-    mem.tc[2] = generate_temp_tc(true); // Only Test
-    //mem.tr[2] = get_temperature(0);//tr cabel
-    mem.tr[2] = generate_temp_tc(false ); // Only Test
+    mem.tc[2] = get_temperature(1);  // Coil temperature (swapped)
+    mem.tr[2] = get_temperature(0);  // Room temperature (swapped)
 
 
     if ((mem.tr[2] <= default_min_tc_to_detect_compressor_on) && (mem.tc[2] > default_min_tc_to_detect_compressor_on)){
