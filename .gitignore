@@ -134,3 +134,4 @@ yarn-error.log
 # Private notes
 NOTES.txt
 TODO_PRIVATE.md
+.claude/
