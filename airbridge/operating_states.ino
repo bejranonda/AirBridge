@@ -404,6 +404,8 @@ boolean compressor_state_change(){
     }
 
   }
+  // v2.1: Added missing return statement
+  return false;
 }
 
 
@@ -562,7 +564,8 @@ void state_2(){
     if (!mem.bl_log.finish && mem.loop_cnt_considering_cut <= state_2_duration*one_mi){//con = on and !bl_recording_is_finish, go state 8 and loop_cnt_considering_cut less than state_2_duration minute
       Serial.println(F("state_2 -> mem.state = 8"));
       mem.state = 8;  mem.state_cnt = 0;
-      set_trstart();
+      // v2.1: Commented out - proprietary v1.0 function not in v2.x
+      //set_trstart();
     }
     else{
       Serial.println(F("state_2 -> mem.state = 3"));

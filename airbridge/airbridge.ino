@@ -34,9 +34,10 @@
 //#include <ESP8266httpUpdate.h>
 //#include <ESP8266mDNS.h>
 #include <time.h>
-#include <ESP8266Ping.h>
-#include <xxtea-lib.h>
-#include <PubSubClient.h>
+// v2.1: Commented out unused libraries
+//#include <ESP8266Ping.h>  // Not used in v2.x, removed
+#include <xxtea-lib.h>      // Used for WiFi password encryption
+//#include <PubSubClient.h>  // MQTT not implemented in v2.x
 
 extern "C"{
   #include "gpio.h"
@@ -48,9 +49,9 @@ extern "C"{
 #include "memory_manager.h"
 MemoryManager mem;
 
-//MQTT
-WiFiClient espClient;
-PubSubClient client(espClient);
+//MQTT - v2.1: Commented out (not implemented in v2.x)
+//WiFiClient espClient;
+//PubSubClient client(espClient);
 
 //LED
 const byte ledYellowPin = 12;
@@ -99,8 +100,9 @@ String mac_name; // SSID name of this module
 /*
  * ~~~~~~~~~~ esaving main ~~~~~~~~
  */
-void log_esaving(); 
-void set_trstart();
+void log_esaving();
+// v2.1: Commented out - proprietary v1.0 function not in v2.x
+//void set_trstart();
 float get_cps_fkt(uint8_t *bl_tr_set, uint8_t *op_tr_set, float *op_tr_start, float *bl_tr_start, const float *op_tout, const float *bl_tout);
 
 /*

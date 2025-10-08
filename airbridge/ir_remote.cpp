@@ -156,6 +156,8 @@ boolean IRRemote::dump(decode_results *results){
     }
     return check_rmt_num_and_change_state(ps_cnt);
   }
+  // v2.1: Added missing return statement
+  return false;
 }    
 
 /*
@@ -2102,6 +2104,8 @@ String IRRemote::get_F_minus(String bit_ir){
   else if (bit_ir == "1111"){
     return F("0000");
   }
+  // v2.1: Added missing return statement
+  return "";
 }
 
 String IRRemote::get_const_bit_fan(int Fan, int Vane){//this function return const fan-mode, if remote has it.
@@ -2170,6 +2174,8 @@ String IRRemote::get_const_bit_fan(int Fan, int Vane){//this function return con
       }
       break;
     default:
-      break;    
+      break;
   }
+  // v2.1: Added missing return statement
+  return "";
 }

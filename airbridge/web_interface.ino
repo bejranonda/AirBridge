@@ -96,7 +96,8 @@ boolean wifi_connect(){
   String ssid = mem.read_eeprom_string(mem_ssid_log_pos[0], mem_ssid_log_pos[1]);
   String password = mem.read_eeprom_string(mem_pass_log_pos[0], mem_pass_log_pos[1]);
   WiFi.hostname(hotspot_name);
-  if (password.substring(0,1) != '\0'){
+  // v2.1: Fixed string comparison (was comparing to char instead of string)
+  if (password.length() > 0 && password.substring(0,1) != ""){
     WiFi.begin(ssid.c_str(), password.c_str());
   }
   else{
@@ -111,7 +112,8 @@ boolean wifi_connect(){
       delay(500);
       Serial.print(F("."));
       if ((i%20 == 0) && (i > 0)){
-        if (password.substring(0,1) != '\0'){
+        // v2.1: Fixed string comparison
+        if (password.length() > 0 && password.substring(0,1) != ""){
           WiFi.begin(ssid.c_str(), password.c_str());
         }
         else{
@@ -165,6 +167,8 @@ boolean check_ssid_available(String ssid_tocheck){
       }
     }
   }
+  // v2.1: Added missing return statement
+  return false;
 }
 
 // Check internet and connecting WiFi with existing SSID and password
