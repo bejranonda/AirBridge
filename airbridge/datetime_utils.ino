@@ -66,7 +66,7 @@ int get_mi(time_t *unix_t){
 ////  mem.write_eeprom_string(mem_time_zone_log_pos[0], mem_time_zone_log_pos[1], time_zone.c_str());
 ////  mem.eeprom_confirm();
 //  
-//  //ssid = "REDACTED_SSID",password = "REDACTED_PASSWORD";//,e_mail = "redacted@example.com",time_zone = "7.0";
+//  // Example: ssid = "YourSSID", password = "YourPassword", e_mail = "your.email@example.com", time_zone = "7.0";
 ////  if (show_data){
 ////    Serial.println(F("get date&time from internet by using"));
 ////    Serial.print(F("ssid = ")); Serial.println(ssid);
