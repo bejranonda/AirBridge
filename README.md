@@ -11,10 +11,9 @@ Supporting 60+ IR protocols across 12 major brands (Daikin, Mitsubishi, LG, Sams
 Originally developed as [NextAir](https://wenext.net/%e0%b8%95%e0%b8%b1%e0%b8%a7%e0%b8%ad%e0%b8%a2%e0%b9%88%e0%b8%b2%e0%b8%87%e0%b8%aa%e0%b8%b4%e0%b8%99%e0%b8%84%e0%b9%89%e0%b8%b2) in 2016-2019, this simplified open-source release focuses on reliable IR signal relay without proprietary energy-saving features.
 
 
-<img width="778" height="543" alt="image" src="https://github.com/user-attachments/assets/a569046a-1932-41be-be0c-db4368434759" />
+<img width="864" height="566" alt="image" src="https://github.com/user-attachments/assets/a1cafae8-69be-475c-84c0-b61e5b12146e" />
 
-*3D rendering of the third-generation design for NextAir / AirBridge (2019)*
-
+*NextAir / AirBridge prototype during real-world operation (2017)*
 
 ---
 
@@ -40,10 +39,9 @@ This is **AirBridge v2.0** - the open-source edition.
 
 **Commercial Version:** For the full-featured version with patented energy-saving technology, visit **[https://wenext.net/](https://wenext.net/)**
 
+<img width="778" height="543" alt="image" src="https://github.com/user-attachments/assets/a569046a-1932-41be-be0c-db4368434759" />
 
-<img width="864" height="566" alt="image" src="https://github.com/user-attachments/assets/a1cafae8-69be-475c-84c0-b61e5b12146e" />
-
-*NextAir prototype during real-world operation (2017)*
+*3D rendering of the third-generation design for NextAir / AirBridge (2019)*
 
 
 ---
